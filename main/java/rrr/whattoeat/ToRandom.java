@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -38,17 +39,23 @@ public class ToRandom extends AppCompatActivity {
 
                 SQLiteDatabase db = DH.getReadableDatabase();
                 Cursor cursor = db.query("Dinner",new String[]{"_store, _food"}, null,null, null, null, null);
-                cursor.moveToFirst();
 
-                int r = (int)(Math.random()*cursor.getCount()); //remember to ( )
+                if (cursor.getCount() != 0) {
+                    cursor.moveToFirst();
 
-                TextView s = (TextView)findViewById(R.id.textViewRamdonStore);
-                TextView f = (TextView)findViewById(R.id.textViewRamdonFood);
+                    int r = (int) (Math.random() * cursor.getCount()); //remember to ( )
 
-                cursor.move(r);
+                    TextView s = (TextView) findViewById(R.id.textViewRamdonStore);
+                    TextView f = (TextView) findViewById(R.id.textViewRamdonFood);
 
-                s.setText(cursor.getString(0));
-                f.setText(cursor.getString(1));
+                    cursor.move(r);
+
+                    s.setText(cursor.getString(0));
+                    f.setText(cursor.getString(1));
+                }
+                else {
+                  Toast.makeText(ToRandom.this, "菜單空的無法推薦唷QQ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -72,5 +73,7 @@ public class Feed extends AppCompatActivity {
         values.put("_store", s.toString());
         values.put("_food", f.toString());
         db.insert("Dinner", null, values);
+
+        Toast.makeText(Feed.this,"成功餵食 " + f + " ！",Toast.LENGTH_SHORT).show();
     }
 }

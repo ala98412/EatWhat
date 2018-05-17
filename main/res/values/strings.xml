@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WhatToEat</string>
+    <string name="title_activity_to_random">" "</string>
+    <string name="title_activity_feed">Feed</string>
+    <string name="title_activity_display">Display</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5515529131818475/3725717782</string>
+
+    <!-- mine ID:  ca-app-pub-5515529131818475/3725717782 -->
+    <!-- google test ID: ca-app-pub-3940256099942544/6300978111-->
+  </resources>

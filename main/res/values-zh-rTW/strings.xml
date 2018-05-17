@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">要吃甚麼?</string>
+    <string name="title_activity_feed">餵食</string>
+    <string name="title_activity_display">列出菜單</string>
+    <string name="title_activity_to_random">幫我決定</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5515529131818475/3725717782</string>
+
+    <!-- mine ID:  ca-app-pub-5515529131818475/3725717782 -->
+    <!-- google test ID: ca-app-pub-3940256099942544/6300978111-->
+</resources>
